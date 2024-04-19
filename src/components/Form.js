@@ -9,13 +9,16 @@ export default function Form(props) {
   }
   const handleupclick=()=>{
     setText(text.toUpperCase());
+    props.showAlert("converted to uppercase","success");
   }
   const handleloclick=()=>{
     setText(text.toLowerCase());
+    props.showAlert("converted to LowerCase","success");
   }
   const handleclrclick=()=>{
     let newtext="";
     setText(newtext);
+    props.showAlert("Text cleared","success");
   }
   const [text,setText]=useState('');
   return (
